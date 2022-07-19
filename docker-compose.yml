@@ -1,0 +1,97 @@
+version: "3.4"
+services:
+  course-php:
+    build:
+      context: .
+      args:
+        XDEBUG_CLIENT_HOST: ${XDEBUG_CLIENT_HOST}
+      dockerfile: ./docker/local/Dockerfile
+    container_name: course-php
+    restart: always
+    networks:
+      course:
+        ipv4_address: ${SUBNET}.2
+    volumes:
+      - "./docker/local/etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
+      - "./docker/local/data/logs/php/:/var/log/php-fpm/"
+      - "./docker/local/data/lock:/lock/"
+      - "./:/var/www/html/course/"
+    environment:
+      - PHP_IDE_CONFIG=${PHP_IDE_CONFIG}
+      - XDEBUG_SESSION=${XDEBUG_SESSION}
+      - ENDPOINT=${ENDPOINT}
+      - COURSE_ROOT_FOLDER=${COURSE_ROOT_FOLDER}
+      - COURSE_USER=${COURSE_USER}
+      - COURSE_PASSWORD=${COURSE_PASSWORD}
+      - DB_HOST=${DB_HOST}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+    extra_hosts:
+      - "${NGINX_HOST_SERVER}:${SUBNET}.4"
+    depends_on:
+      - course-mysql
+  course-mysql:
+    platform: linux/x86_64
+    image: mysql:${MYSQL_VERSION}
+    container_name: ${MYSQL_HOST}
+    networks:
+      course:
+        ipv4_address: ${SUBNET}.3
+    restart: always
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_ROOT_USER=${MYSQL_ROOT_USER}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    ports:
+      - "${MYSQL_PORT}:3306"
+    volumes:
+      - "./docker/db/mysql:/docker-entrypoint-initdb.d"
+      - "./docker/local/data/db/mysql:/var/lib/mysql"
+  course-web:
+    image: nginx:alpine
+    container_name: course-nginx-server
+    volumes:
+      - "./docker/local/etc/nginx/default.conf:/etc/nginx/conf.d/default.conf"
+      - "./docker/local/etc/nginx/default.template.conf:/etc/nginx/conf.d/default.template"
+      - "./:/var/www/html/course"
+      - "./docker/local/data/logs/nginx/access.log:/var/logs/nginx/access.log"
+      - "./docker/local/data/logs/nginx/error.log:/var/logs/nginx/error.log"
+    ports:
+      - "${NGINX_HTTP_PORT}:80"
+    environment:
+      - NGINX_HOST_SERVER=${NGINX_HOST_SERVER}
+    networks:
+      course:
+        ipv4_address: ${SUBNET}.4
+    command: /bin/sh -c "envsubst '$$NGINX_HOST_SERVER $$NGINX_HOST_CLIENT' < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+    restart: always
+    depends_on:
+      - course-php
+  course-myadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: course-phpmyadmin
+    ports:
+      - "${PHP_MYADMIN}:80"
+    volumes:
+      -   ./docker/local/etc/phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
+      -   ./docker/local/etc/phpmyadmin/config.inc.php:/etc/phpmyadmin/config.inc.php
+    environment:
+      - PMA_ARBITRARY=${PMA_ARBITRARY}
+      - PMA_HOST=${PMA_HOST}
+      - UPLOAD_LIMIT=${UPLOAD_LIMIT}
+    networks:
+      course:
+        ipv4_address: ${SUBNET}.5
+    restart: always
+    depends_on:
+      - course-mysql
+networks:
+  course:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: ${SUBNET}.0/28
