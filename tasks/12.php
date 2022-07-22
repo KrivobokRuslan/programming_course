@@ -1,7 +1,7 @@
 <?php
-$var !=
+$var = false;
 
-if ($var != ) {
+if ($var !== true) {
     echo 'true';
 } else {
     echo 'false';

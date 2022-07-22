@@ -3,7 +3,6 @@ $a = "3";
 
 if ($a == "test") {
   echo "true";
-}
-else {
+} else {
     echo "false";
 }

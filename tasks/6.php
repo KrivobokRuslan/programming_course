@@ -1,9 +1,8 @@
 <?php
 $a = -5;
 
-if ($a >= 0 ) {
+if ($a >= 0) {
    echo "true";
-}
-else {
+} else {
     echo "false";
 }
