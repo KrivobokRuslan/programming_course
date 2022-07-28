@@ -12,12 +12,21 @@ for ($i = 1; $i <= 5; $i++) {
     echo "$string <br>";
 }
 
-$x = 'xx';
-$i = 1;
+echo '<br><hr>';
 
-while ($i <= 5) {
+$a = 1;
 
+while ($a <= 5) {
+    $result = '';
+    $b = 1;
 
+    while ($b <= $a) {
+        $result = $result . $x;
+        $b++;
+    }
+
+    echo "$result <br>";
+    $a++;
 }
 /**
  * Первая иттерация
