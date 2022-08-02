@@ -8,3 +8,12 @@ for($i = 1; $i <= 3; $i++){
     $sum += $i;
     echo "$sum";
 }
+
+$a = [5, 2, 3];
+$sum = 0;
+
+for($i = 0; $i < count($a); $i++){
+    $sum += $a[$i];
+}
+
+echo $sum;

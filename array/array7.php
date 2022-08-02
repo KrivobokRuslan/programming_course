@@ -3,6 +3,6 @@
 //и какими-то произвольными значениями. Выведите на экран фамилию, имя и отчество через пробел.
 
 
-$user = array (3 => 'name', 5 => 'surname', 8 => 'patronymic');
+$user = array('name' => 'Ruslan', 'surname' => 'Kryvobok', 'patronymic' => 'Ihorevich');
 
-echo $user [5].' '.$user [3].' '.$user [8];
+echo $user['name'].' '.$user['surname'].' '.$user['patronymic'];

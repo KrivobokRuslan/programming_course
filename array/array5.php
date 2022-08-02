@@ -5,3 +5,9 @@
 $fly = array (2, 5, 3, 9);{
     echo $fly ([0], '*' ,[1],[2], '*' ,[3]);
 }
+
+
+
+$fly = array (2, 5, 3, 9);
+$result = ($fly[0] * $fly[1]) + ($fly[2] * $fly[3]);
+echo $result;
