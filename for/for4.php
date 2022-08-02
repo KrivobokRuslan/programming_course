@@ -1,11 +1,19 @@
 <?php
 
 $sum = 0;
-$i = 1;
+$g = 5;
 
-while ($i <= 100) {
-    $sum += $i;
-    $i++;
+for ($i = 1; $i <= 100; $i++) {
+    $sum = $sum + $g;
 }
+
 echo $sum;
-// почему вывод в конце? и за скобками
+
+$f = 'xx';
+$string = '';
+
+for ($j = 1; $j <= 5; $j++) {
+    $string = $string . $f;
+}
+
+echo "$string <br>";

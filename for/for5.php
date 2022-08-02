@@ -1,33 +1,34 @@
 <?php
 
-$x = 'xx';
+$x = 'x';
+$a = '*';
+$f = 1;
 
-for ($i = 1; $i <= 5; $i++) {
+for ($i = 2; $i <= 10; $i = $i + 2) {
     $string = '';
 
     for ($j = 1; $j <= $i; $j++) {
-        $string = $string . $x;
+        $string = $string . ($f % 2 == 0 ? $a : $x);
     }
 
+    $f++;
     echo "$string <br>";
 }
 
-echo '<br><hr>';
-
-$a = 1;
-
-while ($a <= 5) {
-    $result = '';
-    $b = 1;
-
-    while ($b <= $a) {
-        $result = $result . $x;
-        $b++;
-    }
-
-    echo "$result <br>";
-    $a++;
-}
+//$a = 5;
+//
+//while ($a >= 1) {
+//    $result = '';
+//    $b = 1;
+//
+//    while ($b <= $a) {
+//        $result = $result . $x;
+//        $b++;
+//    }
+//
+//    echo "$result <br>";
+//    $a--;
+//}
 /**
  * Первая иттерация
  *  $x = 'xx'

@@ -1,12 +1,7 @@
 <?php
-
-$b = [
-    3465,
-    5647,
-    345,
-    4536
-];
-
-for ($i = 0; $i < 4; $i++) {
-    echo "$b[$i] <br>";    //$b[0] $b[1] $b[2] $b[3]
-}
+// array_fill(int $start_index, int $count, mixed $value): array
+// array_flip(array $array): array
+// array_key_exists(string|int $key, array $array): bool
+// array_search(mixed $needle, array $haystack, bool $strict = false): int|string|false
+// in_array(mixed $needle, array $haystack, bool $strict = false): bool
+// 
