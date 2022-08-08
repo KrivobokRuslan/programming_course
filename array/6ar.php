@@ -3,5 +3,6 @@
 
 $arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
-for ($i = 0; $i < count($arr); $i = $i + 3){
-echo $arr[$i];}
+for ($i = 2; $i < count($arr); $i = $i + 3) {
+    echo $arr[$i] . '<br>';
+}

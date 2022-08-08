@@ -5,6 +5,6 @@
 $arr = [];
 
 for ($i = 1; $i <= 100; $i++){
-    if ($arr[] = $arr[$i]);
+    $arr[] = $i;
 }
-echo $arr;
+print_r($arr);
