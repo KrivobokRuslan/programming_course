@@ -1,7 +1,8 @@
 <?php
-$a=45;
-if ($a==0)
+$a = 45;
+if ($a == 0) {
     echo "it's zero";
-else
+} else {
     echo "not zero";
+}
 ?>

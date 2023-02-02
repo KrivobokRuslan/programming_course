@@ -1,9 +1,9 @@
 <?php
-$year=2001;
-$onfour=$year/4;
-$onhundr=$year/100;
-if ($onfour=int&&$onhundr=float)
-    echo "leap year";
-else
-    echo "not leap year";
+$i = 2016;
+
+if (($i % 4 == 0 && $i % 100 !== 0) || ($i % 400 == 0)){
+    echo 'высокосный';
+} else {
+    echo 'не высокосный';
+}
 ?>
