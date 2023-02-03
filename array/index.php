@@ -14,19 +14,5 @@
  * // 12 с помощью цикла for заполните массив числами от N до M. вернуть массив.
  */
 include '../functions.php';
-$arr = ['Hello', 'World'];
-$arr[] = 'Hi'; // добавить последний элемент массива
 
-// explode(mixed $separator, array $array)
-// array_flip(array $array): array
-// array_key_exists(string|int $key, array $array): bool
-// array_search(mixed $needle, array $haystack, bool $strict = false): int|string|false
-// in_array(mixed $needle, array $haystack, bool $strict = false): bool
-//
-
-echo arrayImplode(', ', [3,4,5,6,7,8,9,10]);
-echo '<br>';
-echo implode(', ', [3,4,5,6,7,8,9,10]);
-
-dd(arrayFill(3, 5, 1));
-dd(array_fill(3,5,1));
+$a = [5, 6, 7, 8, 9];
