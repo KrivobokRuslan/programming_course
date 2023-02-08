@@ -10,6 +10,6 @@ function coun ($arr)
 
     }
 }
-//echo $value, "<br>";
-echo coun( $arr = ["PHP", "HTML", "CSS"]);
+$arr = ["PHP", "HTML", "CSS"];
+echo coun ($arr);
 ?>
