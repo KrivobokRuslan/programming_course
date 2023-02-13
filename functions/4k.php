@@ -1,9 +1,9 @@
 <?php
-$arr = ["PHP", "HTML", "CSS"];
+$arr = ["PHP", "HTML", "CSS", "array"];
 //$arr[1] = "HTML";
 //$arr[2] = "CSS";
 
-function coun ($arr)
+function coun ($arr) //писал через foreach , тренировался
 {
     $a = 0;
 
@@ -14,6 +14,6 @@ function coun ($arr)
 
     return $a;
 }
-$arr = ["PHP", "HTML", "CSS"];
+$arr = ["PHP", "HTML", "CSS", "ar"];
 echo coun ($arr);
 ?>
