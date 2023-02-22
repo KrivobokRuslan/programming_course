@@ -1,8 +1,7 @@
 <?php // 13 попытка через массив
-function sumel ($array):array
+function sumel ($array): float
 {
-    $calc = (($value(0) - $value(1) / $value(2);
-    return  $calc;
+    return ($array[0] - $array[1]) / $array[2];
 }
 
 $mass = [9, 3, 2];

@@ -4,9 +4,7 @@
 function _fliparray(array $array): array {
     $result = [];
     foreach ($array as $key => $value){
-        $value = $k1;
-        $key = $v1;
-        $result = $newarray[$k1 => $v1];
+        $result[$value] = $key;
     }
 
     return $result;

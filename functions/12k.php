@@ -1,7 +1,7 @@
 <?php // функция возвращающая число
-function ech ($e){
-    echo $e . "<br>";
-    }
-    $n = 45; // " hip";
-    ech($n);
+function ech($e) {
+    return $e . "<br>";
+}
+$n = 45; // " hip";
+echo ech($n);
 ?>

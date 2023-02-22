@@ -1,8 +1,6 @@
 <?php // вывод квадрата числа
 function  square ($q){
-    $sq = $q * $q;
-    echo $sq. "<br>";
-
+    return $q * $q;
 }
-square(7);
-?>// квадрат числа
+echo square(7);
+?>

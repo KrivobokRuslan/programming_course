@@ -4,18 +4,20 @@
 //{
 
 
-function examination ($array, $exam)
+function examination ($array, $exam): bool
 {
     foreach ($array as $k => $v)
     {
-                if ($exam == $k)
-            echo 'key  '. $exam . '  found'. '<br>';
-
+        if ($exam == $k) {
+            return true;
+        }
     }
+
+    return false;
 }
 $array = [0 => 'first', 1 => 'second', 2 => 'third', 3 => 'fourth'];
 $exam = 2;
-examination($array,3);
+echo examination($array,3);
 
 
-?>// what is var_damp?
+?>

@@ -3,7 +3,7 @@
 function exists($searchvalue, $arr):bool {
     $result = false;
     foreach($arr as $v => $s){
-        if($s == $searchvalue || $v == $searchvalue){
+        if($v == $searchvalue){
             $result = true;
         }
     }

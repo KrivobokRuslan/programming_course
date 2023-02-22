@@ -1,27 +1,26 @@
 <?php // Сделайте функцию, которая принимает параметром число от 1 до 7,
 // а возвращает день недели на русском языке.
-function day ($d)//:int
+function day ($d): string
 {
     if ($d == 1)
-    echo "понедельник" ."<br>";
+        return "понедельник";
     elseif ($d == 2)
-        return "вторник"."<br>";
+        return "вторник";
 
     elseif ($d == 3)
-        return "среда"."<br>";
+        return "среда";
 
     elseif ($d == 4)
-        return "четверг"."<br>";
+        return "четверг";
 
     elseif ($d == 5)
-        return "пятница"."<br>";
+        return "пятница";
 
     elseif ($d == 6)
-        return "суббота"."<br>";
+        return "суббота";
 
     elseif ($d == 7)
-        return "воскресенье"."<br>";
-
+        return "воскресенье";
 }
  echo day(6);
 ?>    //не получалось с одним =, выдавало понедельник и с :int выдает ошибку

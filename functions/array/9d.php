@@ -2,33 +2,32 @@
 //4) Сделайте функцию, которая принимает параметром число от 1 до 7,
 // а возвращает день недели на русском языке.
 function _day($a){
+    $result = 'введите число от 1 до 7';
+
     switch($a){
         case 1:
-            echo 'пн';
+            $result = 'пн';
             break;
         case 2:
-            echo 'вт';
+            $result = 'вт';
             break;
         case 3:
-            echo 'ср';
+            $result = 'ср';
             break;
         case 4:
-            echo 'чт';
+            $result = 'чт';
             break;
         case 5:
-            echo 'пт';
+            $result = 'пт';
             break;
         case 6:
-            echo 'сб';
+            $result = 'сб';
             break;
         case 7:
-            echo 'вс';
+            $result = 'вс';
             break;
-        default:
-            echo 'введите число от 1 до 7';
     }
 
-    $result = $a;
     return $result;
 }
-echo _day(8);
+echo _day(5);
