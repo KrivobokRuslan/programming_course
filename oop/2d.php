@@ -8,6 +8,13 @@ class Paint {
     public $color;
     public function __construct() {
         $this->color = new Color();
-        echo $this->color->showthecolor();
+    }
+
+    public function showthecolor()
+    {
+        return $this->color->showthecolor();
     }
 }
+
+$paint = new Paint();
+$paint->showthecolor();

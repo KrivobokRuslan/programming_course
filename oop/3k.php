@@ -5,11 +5,11 @@ class mother {
     public $surname = 'bezuh';
     public int $yearofbirth = 2000;
     public int $height = 160;
-    public __constract ($hair, $location, $surname, $yearofbirth ){
-        this->hair = $hair;
-        this->location = $location;
-        this->surname = $surname;
-        this->yearofbirth = $yearofbirth;
+    public function __construct ($hair, $location, $surname, $yearofbirth ){
+        $this->hair = $hair;
+        $this->location = $location;
+        $this->surname = $surname;
+        $this->yearofbirth = $yearofbirth;
     }
     public function visual (){ //int
         echo 'mother color hair is  '. $this-> hair ;

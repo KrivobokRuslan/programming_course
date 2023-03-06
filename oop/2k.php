@@ -1,21 +1,26 @@
 <?php
-class user
+
+class User
 {
     public $name;
     public $password;
-      public function username($a)
+
+    public function username($a)
     {
-        echo 'name - '.$this->name.'<br>';
-        echo 'pass -  '.$this->password.'<br>';
+        echo 'name - ' . $this->name . '<br>';
+        echo 'pass -  ' . $this->password . '<br>';
         echo $a;
-        $this->text();
+        $this->text(111);
     }
-     public function text($b){
-                echo 'Number'.'<br>';// $a
-         echo $b ;//+= $a;
-        }
+
+    public function text($b)
+    {
+        echo 'Number' . '<br>';// $a
+        echo $b;//+= $a;
+    }
 
 }
+
 $names = new user();
 $names->name = 'Ivan';
 $names->password = 'Gold';
