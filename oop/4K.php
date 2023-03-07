@@ -153,6 +153,23 @@ echo "Nata id=  $Nana->id".'<br>';
 echo Us::niochem();
 ?>
 
+<?php
+class Person
+{
+    function __construct(public $name, public $age)
+    {
+        $this->name = $name;
+        $this->age = $age;
+    }
+
+    function displayInfo()
+    {
+        echo "Name: $this->name; Age: $this->age<br>";
+    }
+}
+$tom = new Person("Tom", 36);
+$tom -> displayInfo();
+?>
 
 
 

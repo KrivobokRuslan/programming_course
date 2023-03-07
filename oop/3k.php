@@ -1,13 +1,24 @@
 <?php
-class User0{
-    public $name;
-    public $e_mail;
-    public $number;
-    public function __construct($name, $e_mail, $number )
-    {
-        $this->name = $name;
-        $this->e_mail = $e_mail;
-        $this->number = $number;
+//class User0{
+  //  public $name;
+    //public $e_mail;
+    //public $number;
+    //public function __construct($name, $e_mail, $number )
+    //{
+      //  $this->name = $name;
+        //$this->e_mail = $e_mail;
+        //$this->number = $number;
+class mother {
+    public $hair = 'light';
+    public $location = 'Kharkov';
+    public $surname = 'bezuh';
+    public int $yearofbirth = 2000;
+    public int $height = 160;
+    public function __construct ($hair, $location, $surname, $yearofbirth ){
+        $this->hair = $hair;
+        $this->location = $location;
+        $this->surname = $surname;
+        $this->yearofbirth = $yearofbirth;
     }
     public function input () {
         return $this->name. " / ". $this->e_mail ." / ". $this->number;

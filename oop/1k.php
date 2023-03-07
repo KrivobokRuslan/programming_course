@@ -1,22 +1,22 @@
 <?php
-class mother {
+class Mother {
     public $hair = 'light';
     public $location = 'Kharkov';
     private $surname = 'bezuh';
-    private int $yearofbirth = 2000;
+    public int $yearofbirth = 2000;
     public int $height = 160;
 
-    public function old ( $year ){ //int
+    public function old($year){ //int
         return $year  - $this->yearofbirth;
     }
 }
 
-class child extends mother{
+class Child extends Mother{
     public int $yearofbirth = 2020;
     public int $height = 56;
 }
-$mom = new mother();
-$sun = new child();
+$mom = new Mother();
+$sun = new Child();
 echo 'mother color hair is  '. $mom-> hair ;
 echo '<br>';
 echo 'child color hair is   '. $sun->hair;
@@ -27,4 +27,4 @@ echo 'year sun  '. $sun->yearofbirth  ;
 echo '<br>';
 echo $sun->old(2023);
 echo '<br>';
-?> // почему то берет значение из класса мамы
+?>
