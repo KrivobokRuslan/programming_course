@@ -51,6 +51,7 @@ class AnimalUser {
 $animalUser = new AnimalUser(new Marsselle());
 echo $animalUser->eat();
 
+
 /**
  * сделать калькулятор для расчета площади геометрических фигур
  * Квадрат
