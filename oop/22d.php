@@ -1,12 +1,19 @@
 <?php
-class Color {
-    public function showthecolor() {
+
+class Color
+{
+    public function showthecolor()
+    {
         echo "The color is";
     }
 }
-class Paint {
+
+class Paint
+{
     public $color;
-    public function __construct() {
+
+    public function __construct()
+    {
         $this->color = new Color();
     }
 
