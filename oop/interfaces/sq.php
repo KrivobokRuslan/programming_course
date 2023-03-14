@@ -1,5 +1,9 @@
 <?php
-class Square {
+interface Figure {
+    public function area();
+}
+
+class Square implements Figure {
     public $side;
     public function __construct($a) {
         $this->side = $a;
@@ -13,7 +17,7 @@ $square = new Square(6);
 echo $square->area();
 
 class Calculator {
-    public function area($method) {
+    public function area(Figure $method) {
         return $method->area(); //положили переменную в метод а не обратились к методу через себя self::area()...
     }
 }
@@ -21,7 +25,7 @@ class Calculator {
 $calc = new Calculator();
 echo $calc->area($square);
 
-class Circle {
+class Circle implements Figure {
     public $radius;
     public $pi = 3.14;
     public function __construct($b) {
@@ -35,7 +39,7 @@ class Circle {
 $circle = new Circle(9);
 echo $calc->area($circle);
 
-class Rectangle {
+class Rectangle implements Figure {
     public $sideone;
     public $sidetwo;
     public function __construct($c, $d) {
@@ -49,7 +53,7 @@ class Rectangle {
 $rectangle = new Rectangle(3,4);
 echo $calc->area($rectangle);
 
-class Trapezoid {
+class Trapezoid implements Figure {
     public $topside;
     public $bottomside;
     public $height;
@@ -65,7 +69,7 @@ class Trapezoid {
 }
 $trapezoid = new Trapezoid(8,5,3);
 echo $calc->area($trapezoid);
-class Rombus {
+class Rombus implements Figure {
     public $diagonalfirst;
     public $diagonalsecond;
     public function __construct($h, $i) {
@@ -79,7 +83,7 @@ class Rombus {
 $rombus = new Rombus(10,5);
 echo $calc->area($rombus);
 
-class Triangle {
+class Triangle implements Figure {
     public $bottom;
     public $height;
     public function __construct($j, $k) {

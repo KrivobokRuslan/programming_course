@@ -6,14 +6,33 @@ $var = "442158755745";
 
 $sum = 0;
 for ( $i = 0; $i < strlen($var); $i++) {
-    if ($i / 7 == 1) {
-        $sum ++;
+    if ($var[$i] / 7 == 1) {
+        $sum++;
     }
-
 }
 echo $sum;
 
+$sum = 0;
 
+for ( $i = 0; $i < strlen($var); $i++) {
+    if ($var[$i] == 7) {
+        $sum++;
+    }
+}
 
+echo $sum;
+
+function countInString(string $string, string $needle) {
+    $sum = 0;
+    for ( $i = 0; $i < strlen($string); $i++) {
+        if ($string[$i] / $needle == 1) {
+            $sum++;
+        }
+    }
+
+    return $sum;
+}
+
+echo countInString('333334', '3');
 
 
