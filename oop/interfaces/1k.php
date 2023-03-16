@@ -3,13 +3,10 @@ function enumeration($n, $x)
 {
     $sum = 0;
     $a = 0;
-    $s = 0;
-    for ($i = 0; $i < strlen($n); $i++) {
 
+    for ($i = 0; $i < strlen($n); $i++) {
         $sum += $n[$i];
-        $s = $n[$i];//return $s
-        // echo $s.'<br>';
-        if ($s == $x) {
+        if ( $n[$i]== $x) {
             $a++;
         }
     }

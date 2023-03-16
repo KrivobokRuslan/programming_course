@@ -31,6 +31,7 @@ echo 'произведение равно  '.$productnum. '<br>';
 function examination ($arr){
     $multiplication_result= 1;
     $a = 0;
+    $mass = [];
     foreach ($arr as $key => $item){ // проверка парный или нет
         if ($key % 2 ==0)
             $multiplication_result *= $item; //перемножение парных элементов
@@ -40,7 +41,7 @@ function examination ($arr){
             $a++;
         }
     }
-    return $multiplication_result;
+    return [$multiplication_result, $mass];
     //return $mass;
 }
 
@@ -52,7 +53,8 @@ for ($a = 0; $a < count($mass); $a++){
 
 }
 echo 'povtor'.'<br>';
-echo 'произведение =  '.examination ($arr);
+$a = examination ($arr);
+echo 'произведение =  '.$a[0];
 echo '<br>'.'элементы с непарными ключами'.'<br>';
-outondispley($mass);
+outondispley($a[1]);
 ?>
