@@ -3,8 +3,8 @@
 //Например, вводим: Иванов Иван Петрович, а в результате должны получить: Иванов И. П.
 
 $person = "Ivanov Ivan Petrovych";
-
-$newperson = explode(' ', $person); //если не было бы разделителя чем разделять?
+function for_name (string $name) : string {
+$newperson = explode(' ', $name);
 $result = '';
 $result1 = '';
 
@@ -17,9 +17,12 @@ for ($i = 0; $i < count($newperson); $i++) {
     $result = $result . ' ' . $newperson[$i][0] . '.';
 }
 
-echo  $result;
+    return $result;
+}
+echo for_name($person);
 
 echo '<br>';
+
 
 foreach ($newperson as $key => $value) {
     if ($key == 0) {

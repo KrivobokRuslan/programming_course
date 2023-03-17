@@ -3,15 +3,18 @@
 // вами цифры в выбранном вами числе. Например: цифра 5 в числе 442158755745 встречается 4 раза
 
 $var = "442158755745";
-
-$sum = 0;
-for ( $i = 0; $i < strlen($var); $i++) {
-    if ($var[$i] / 7 == 1) {
-        $sum++;
+function how_many (string $var) : int {
+    $sum = 0;
+    for ($i = 0; $i < strlen($var); $i++) {
+        if ($var[$i] / 7 == 1) {
+            $sum++;
+        }
     }
+        return $sum;
 }
-echo $sum;
+echo how_many($var);
 
+function how__many (string $var) : int {
 $sum = 0;
 
 for ( $i = 0; $i < strlen($var); $i++) {
@@ -19,8 +22,10 @@ for ( $i = 0; $i < strlen($var); $i++) {
         $sum++;
     }
 }
+    return $sum;
+}
+echo how__many($var);
 
-echo $sum;
 
 function countInString(string $string, string $needle) {
     $sum = 0;

@@ -4,24 +4,27 @@
 // Далее, вычислить произведение тех элементов, которые больше ноля и у которых парные индексы.
 //После вывести на экран элементы, которые больше ноля и у которых не парный индекс.
 
-$arr = [];
 
-for ($i = 0; $i < 20; $i++) {
-    $arr[] = rand(0, 100);
-}
-$sum = 1;
+function index__ ($arr) : int{
+    $arr = [];
 
-for ($i = 0; $i < count($arr); $i++) {
-    if ($arr[$i] > 0 && strlen($i) == 2) {
-        $sum *= $arr[$i];
+    for ($i = 0; $i < 20; $i++) {
+        $arr[] = rand(0, 100);
     }
-}
-echo $sum;
+    $sum = 1;
 
-echo '<br>';
-
-for ($i = 0; $i < count($arr); $i++) {
-    if ($arr[$i] > 0 && strlen($i) != 2) {
-        echo $arr[$i] . '<br>';
+    for ($i = 0; $i < count($arr); $i++) {
+        if ($arr[$i] > 0 && strlen($i) == 2) {
+            $sum *= $arr[$i];
+        }
     }
+    //echo $sum;
+
+
+    for ($i = 0; $i < count($arr); $i++) {
+        if ($arr[$i] > 0 && strlen($i) != 2) {
+            $arr[$i] . '<br>';
+        }
+    }
+    return $sum;
 }

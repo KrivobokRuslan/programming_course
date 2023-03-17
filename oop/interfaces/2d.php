@@ -3,9 +3,13 @@
 //По желанию можете сделать проверку на корректность введения данных пользователем.
 
 $num = "123";
-$sum = 0;
+//$sum = 0;
 
-for ($i = 0; $i < strlen($num); $i++) {
-    $sum += $num[$i];                     // не может сложить строки?
+function strnum ($num): int {
+    $sum = 0;
+    for ($i = 0; $i < strlen($num); $i++) {
+        $sum += $num[$i];
+    }
+    return $sum;
 }
-echo $sum;
+echo strnum($num);
