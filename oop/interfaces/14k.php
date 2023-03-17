@@ -23,4 +23,11 @@ function _ucfirst($stroka){
 $finish = _ucfirst('ybloko');
 echo '<br>'."'ucfirst'".'<br>';
 echo "slovo $finish[0]$finish[1]";
+
+function __ucfirst(string $str): string {
+    $firstLetter = strtoupper($str[0]);
+    $str[0] = $firstLetter;
+
+    return $str;
+}
 ?>

@@ -9,8 +9,5 @@ function _arrayFill ($exempl, $number){
     return $arr;
 }
 $enter =  _arrayFill('y', 6);
-echo $enter[0].'<br>'; // вывод массива через ф-цию или еще как-то можно?
+print_r($enter); // вывод массива через ф-цию или еще как-то можно?
 ?>
-
-//for ($a=0; $a<=count($arr);$a++)
-  //  echo "'$arr[$a]'";

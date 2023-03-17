@@ -17,20 +17,20 @@ for ($i=1;$i<=count($mass);$i++) {
 echo '<br>';
 function sum_check ($mass){
 //$mass = [3,5,2,1,6,7];
-$sum = $mass[0];
-$number_of_iteration = 2;
-for ($i=1;$i<=count($mass);$i++) {
-    $sum += $mass[$i];
-    if ($sum <= 10){
-        $number_of_iteration++;
+    $sum = $mass[0];
+    $number_of_iteration = 1;
+    for ($i=1;$i<=count($mass);$i++) {
+        if ($sum <= 10){
+            $sum += $mass[$i];
+            $number_of_iteration++;
+        }
+        else{
+            break;
+        }
     }
-    else{
-        break;
-    }
+    return $number_of_iteration;
 }
-return $number_of_iteration;
-}
-$mass = [3,5,6,1,6,7];
+$mass = [11,1,1,1,6,7];
 echo sum_check($mass);
 echo '<br>';
 $arr = [ 2, 2, 2, 2, 2, 2, 2, 2];

@@ -1,19 +1,8 @@
 <?php
-var_dump(false);
+function gets(int $n) {
+    for ($i = 1; $i <= $n; $i++) {
+        echo (int)($i . $i);
+    }
+}
 
-/**
- *
- *
- *         |   5   |
- *             ^
- *           /   \
- *        $b       $a
- *
- *
- *
- *
- */
-
-$a = 8;
-$b = &$a;
-$a = 5;
+gets(7);

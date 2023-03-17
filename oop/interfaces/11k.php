@@ -3,9 +3,10 @@
 function naturalnumber ($n){
     $sum = 0;
     $arr = [];
-    for ($i=0; $i < $n; $i++){
-        $arr[$i] = ($i + 1) *  ($i + 1);
-        $sum += $arr[$i];
+    for ($i=1; $i <= $n; $i++){
+        $r = (int)"$i$i";
+        $arr[] = $r * $r;
+        $sum += $r * $r;
     }
     return [$arr, $sum];
 }
@@ -21,4 +22,5 @@ $s = naturalnumber(7);
 //}
 enter($s[0]);
 echo " sum = $s[1]";
+
 ?>
