@@ -4,7 +4,7 @@
 
 $numbers = [];
 $numbers = array_fill(0, 25,20);
-function find_if_five ($numbers) : int {
+function find_if_five () : int {
     $sum = 0;
     for ($i = 20; $i < 46; $i++) {
         if ($i % 5 == 0) {
@@ -13,4 +13,4 @@ function find_if_five ($numbers) : int {
     }
     return $sum;
 }
-echo find_if_five($numbers);
+echo find_if_five();

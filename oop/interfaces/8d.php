@@ -4,8 +4,8 @@
 
 function inhour (int $i) : int {
     $gradInHour = 360 / 12;
-    $gradCount = $i;
-    return $gradCount / $gradInHour;
+
+    return $i / $gradInHour;
 }
 $v = 288;
 echo inhour($v);

@@ -3,28 +3,30 @@
 //Вам нужно создать массив и заполнить его случайными числами от 1 до 100 (ф-я rand).
 // Далее, вычислить произведение тех элементов, которые больше ноля и у которых парные индексы.
 //После вывести на экран элементы, которые больше ноля и у которых не парный индекс.
+$arr = [];
 
+for ($i = 0; $i < 20; $i++) {
+    $arr[] = rand(0, 100);
+}
 
-function index__ ($arr) : int{
-    $arr = [];
-
-    for ($i = 0; $i < 20; $i++) {
-        $arr[] = rand(0, 100);
-    }
+function index__ (array $arr): array {
     $sum = 1;
+    $notPair = [];
 
     for ($i = 0; $i < count($arr); $i++) {
         if ($arr[$i] > 0 && strlen($i) == 2) {
             $sum *= $arr[$i];
         }
     }
-    //echo $sum;
-
 
     for ($i = 0; $i < count($arr); $i++) {
         if ($arr[$i] > 0 && strlen($i) != 2) {
-            $arr[$i] . '<br>';
+            $notPair[] = $arr[$i];
         }
     }
-    return $sum;
+
+    return [
+        'sum' => $sum,
+        'not_pair' => $notPair
+    ];
 }

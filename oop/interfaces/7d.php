@@ -4,33 +4,18 @@
 
 $person = "Ivanov Ivan Petrovych";
 function for_name (string $name) : string {
-$newperson = explode(' ', $name);
-$result = '';
-$result1 = '';
+    $newperson = explode(' ', $name);
+    $result = '';
 
-for ($i = 0; $i < count($newperson); $i++) {
-    if ($i == 0) {
-        $result = $newperson[$i];
-        continue;
+    for ($i = 0; $i < count($newperson); $i++) {
+        if ($i == 0) {
+            $result = $newperson[$i];
+            continue;
+        }
+
+        $result = $result . ' ' . $newperson[$i][0] . '.';
     }
-
-    $result = $result . ' ' . $newperson[$i][0] . '.';
-}
 
     return $result;
 }
 echo for_name($person);
-
-echo '<br>';
-
-
-foreach ($newperson as $key => $value) {
-    if ($key == 0) {
-        $result1 = $value;
-        continue;
-    }
-
-    $result1 = $result1 . ' ' . $value[0] . '.';
-}
-
-echo $result1;
