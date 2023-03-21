@@ -7,6 +7,8 @@ for ($i = 0; $i < 20; $i++) {
     $array[] = rand(0, 100);
 }
 
+
+
 function min_n_max (array &$array): void  {
     $max = $array[0];
     $min = $array[0];
