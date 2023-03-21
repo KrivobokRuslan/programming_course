@@ -31,3 +31,32 @@ echo "examination number = $number".'<br>';
 echo "summ = ". summa(10,95,$number);
 
 ?>
+
+
+
+<?php
+class Division_by_a_number
+{
+
+    public function __construct(private int $cmin, private int $cmax, private int $cnumber)
+    {
+    }
+    function csumma () :int
+    {
+      $csumm = 0;
+      $mi = $this->cmin; // зачем переприсваивать?
+      $ma = $this->cmax;
+      $nu = $this->cnumber;
+
+        for ($i = $mi; $i <= $ma; $i++) {
+          if ($i % $nu == 0) {
+                $csumm += $i;
+            }
+     }
+        return $csumm;
+    }
+}
+$finalDiv = new Division_by_a_number(10, 95, 8);
+ echo '<br>'.'<br>'."class <br> range between 10 - 95";
+ echo '<br>'."summa =".$finalDiv->csumma();
+?>

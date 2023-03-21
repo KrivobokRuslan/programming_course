@@ -1,4 +1,4 @@
-<?php //вычислить произведение тех элементов, которые больше ноля и у которых парные индексы
+<?php /*//вычислить произведение тех элементов, которые больше ноля и у которых парные индексы
         //После вывести на экран элементы, которые больше ноля и у которых не парный индекс
 
 $arr = [];
@@ -26,7 +26,18 @@ foreach ($arr as $key => $item){ // проверка парный или нет
         $a++;
     }
 }
-echo 'произведение равно  '.$productnum. '<br>';
+echo 'произведение равно  '.$productnum. '<br>';*/
+function array_creation ($min, $max, $num)
+{
+    $arr = [];
+
+    // $min = 1;
+    // $max = 100;
+    for ($i = 0; $i < $num; $i++) {  // создал массив со случайными числаси от 1 до 100 в кол-ве 6
+        $arr[$i] = rand($min, $max);
+        return $arr;
+    }
+}
 
 function examination ($arr){
     $multiplication_result= 1;
@@ -52,8 +63,11 @@ for ($a = 0; $a < count($mass); $a++){
 }
 
 }
+
+$f = array_creation (1, 100, 6);
+print_r($f);
 echo 'povtor'.'<br>';
-$a = examination ($arr);
+$a = examination ($f);
 echo 'произведение =  '.$a[0];
 echo '<br>'.'элементы с непарными ключами'.'<br>';
 outondispley($a[1]);

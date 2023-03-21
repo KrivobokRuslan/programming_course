@@ -15,12 +15,12 @@ for ($i=1;$i<=count($mass);$i++) {
     }
 }
 echo '<br>';
-function sum_check ($mass){
+function sum_check ($mass, $n){
 //$mass = [3,5,2,1,6,7];
     $sum = $mass[0];
     $number_of_iteration = 1;
     for ($i=1;$i<=count($mass);$i++) {
-        if ($sum <= 10){
+        if ($sum <= $n){
             $sum += $mass[$i];
             $number_of_iteration++;
         }
@@ -31,15 +31,25 @@ function sum_check ($mass){
     return $number_of_iteration;
 }
 $mass = [11,1,1,1,6,7];
-echo sum_check($mass);
+echo '<br>'."function".'<br>';
+print_r($mass);
+echo '<br>';
+echo sum_check($mass, 10);
 echo '<br>';
 $arr = [ 2, 2, 2, 2, 2, 2, 2, 2];
-echo sum_check($arr);
+print_r($arr);
+echo '<br>';
+echo sum_check($arr, 10);
 
-   // do {
-       // $number_of_iteration++;
-   // }
-  //  while ($sum <= 10);
-//}
-//echo $number_of_iteration;
-?>
+
+/**/?><!--
+
+--><?php
+/*class Summnumber {
+    function __constract(privat $carr){
+
+    }
+    function
+
+}
+*/?>

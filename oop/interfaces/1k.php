@@ -19,7 +19,7 @@ function enumeration($n, $x)
 }
 //echo "Число: {$n}\n";
 //echo "Сумма: {$s}";
-enumeration ("14256585458354", 8);
+enumeration ("14256585458354", 4);
 echo "<br>";
 
 class Enumaration {
@@ -52,18 +52,47 @@ class Enumaration {
     }
 }
 
-class Enumaration1 {
+/*class Enumaration1 {
     private int $number;
     private int $numberForCount;
     public function __construct(int $number, int $numberForCount) {
         $this->number = $number;
         $this->numberForCount = $numberForCount;
     }
-}
+}*/
 
-$enum = new Enumaration(23413454356234, 4);
+$enum = new Enumaration(14256585458354, 4);
 echo $enum->getSum();
 echo '<br>';
 echo $enum->getCount();
 
 ?>
+
+<?php
+class CopyEnumaration
+{
+    public function __construct(private int $cnumber, private int $cdigit)
+    {
+    }
+
+    public function bust_a_sum()
+    {
+        $st = (string)$this->cnumber;
+        $numoftimes = $this->cdigit;
+        $csum = 0;
+        $repeat = 0;
+        for ($i = 0; $i < strlen($st); $i++) {
+            $csum += $st[$i];
+            if ($st[$i] == $numoftimes ){
+            $repeat++;
+            }
+        }
+        echo 'repeat - '.$repeat.'<br>';
+        return $csum;
+    }
+}
+$final = new CopyEnumaration(22222222223, 3);
+echo '<br>'.'my'.'<br>';
+echo 'sum = '.$final->bust_a_sum();
+?>
+

@@ -11,3 +11,23 @@ function _arrayFill ($exempl, $number){
 $enter =  _arrayFill('y', 6);
 print_r($enter); // вывод массива через ф-цию или еще как-то можно?
 ?>
+
+<?php //Пример: arrayFill('x', 5) сделает массив ['x', 'x', 'x', 'x', 'x'].
+class Arfill {
+    function __construct(public string $ex, public int $num)
+    {
+    }
+    function __arrayFill(){
+        $arr = [];
+        $num = $this->num;
+        $ex = $this->ex;
+        for ($i=0; $i < $num; $i++){
+            $arr [$i] = $ex;
+        }
+        return $arr;
+    }
+}
+$arfillfinal = new Arfill('x', 8);
+echo '<br>'."class ".'<br>';
+print_r($arfillfinal->__arrayFill());
+?>
