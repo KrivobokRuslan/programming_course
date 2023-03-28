@@ -25,16 +25,16 @@ class String_funcrions {
         }
         return $strokafinal;
     }
-    public static function ___strpos ($stro, $substring,$key){ //Возвращает позицию первого вхождения подстроки
+    public static function ___strpos ($stro, $substring,$key){
         $mass_sub = str_split(self::$substring);
         $mass_str = str_split(self::$stro);
         $final = 0;
-for ($i =self:: $key; $i <=count($mass_str); $i++) {
-    if ($mass_sub[0] == $mass_str[$i]) {
-        $final = $i + self::$key ;
-        break;
+        for ($i =self:: $key; $i <=count($mass_str); $i++) {
+        if ($mass_sub[0] == $mass_str[$i]) {
+            $final = $i + self::$key ;
+            break;
+            }
         }
-    }
         return $final;
     }
 }
@@ -82,6 +82,10 @@ class User{
     public function __construct(string $a, int $b)
     {
         echo $a . '  is  '.$b .'  years old'.'<br>';
+    }
+
+    public function __toString(): string {
+        return 'class as string';
     }
 }
 echo '<br>'.'<br>'.'proba'.'<br>';
