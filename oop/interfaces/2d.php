@@ -7,15 +7,18 @@ $num = "123";
 //$sum = 0;
 
 class Strnum {
-    public function strnum (string $num): int {
+    public function __construct(private int $number) {}
+    public function strnum (): int {
         $sum = 0;
-        for ($i = 0; $i < strlen($num); $i++) {
-            $sum += (int)$num[$i];
+
+        for ($i = 0; $i < strlen($this->number); $i++) {
+            $sum += (int)$this->number[$i];
         }
+
         return $sum;
     }
 }
 
 $calculator = new Strnum(472);
-$newnumber = $calculator->strnum(472);
+$newnumber = $calculator->strnum();
 echo $newnumber;

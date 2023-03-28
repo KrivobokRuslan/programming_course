@@ -41,18 +41,16 @@ class Division_by_a_number
     public function __construct(private int $cmin, private int $cmax, private int $cnumber)
     {
     }
-    function csumma () :int
+    public function csumma () :int
     {
-      $csumm = 0;
-      $mi = $this->cmin; // зачем переприсваивать?
-      $ma = $this->cmax;
-      $nu = $this->cnumber;
+        $csumm = 0;
 
-        for ($i = $mi; $i <= $ma; $i++) {
-          if ($i % $nu == 0) {
+        for ($i = $this->cmin; $i <= $this->cmax; $i++) {
+            if ($i % $this->cnumber == 0) {
                 $csumm += $i;
             }
-     }
+        }
+
         return $csumm;
     }
 }

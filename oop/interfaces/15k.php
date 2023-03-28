@@ -48,56 +48,41 @@ print_r($finish1[4]);
 
 
 class min_max_exchange {
+    private array $initArray = [];
     function __construct( private int $num_elem, private int  $copymini, private int $copymaxi)
-{
-}
-function cnewmassiw ($num_elem, $copymini, $copymaxi) {
-    $carr = [];
-    $cn = $this->num_elem;
-    $cmi = $this->copymini;
-    $cma = $this->copymaxi;
-    for ($i = 0; $i<$cn; $i++) {
-        $cx = rand($cmi, $cma);
-        $carr[$i] = $cx;
+    {
+        for ($i = 0; $i< $num_elem; $i++) {
+            $x = rand($copymini, $copymaxi);
+            $this->initArray[$i] = $x;
+        }
+        print_r($this->initArray);
     }
-    return $carr;
-}
-    function copy_mini_and_maxi ($carr){
-        $cmax = $carr[0];
-        $ckmax = 0;
-        $b = 0;
-        for ($q=1; $q<count($carr); $q++){
-            if ($carr[$q] > $cmax){
-                $cmax = $carr[$q];
-                $ckmax = $q;
+
+    function copy_mini_and_maxi (){
+        $max = $this->initArray[0];
+        $kmax = 0;
+        $a = 0;
+        for ($i=1;$i<count($this->initArray);$i++){
+            if ($this->initArray[$i] > $max){
+                $max = $this->initArray[$i];
+                $kmax = $i;
             }
         }
-        $cmin = $carr[0];
-        $ckmin = 0;
-        for ($i=1;$i<count($carr);$i++){
-            if ($carr[$i] < $cmin){
-                $cmin = $carr[$i];
-                $ckmin = $i;
-            }
+        $min = $this->initArray[0];
+        $kmin = 0;
+        for ($i=1;$i<count($this->initArray);$i++){
+            if ($this->initArray[$i] < $min){
+                $min = $this->initArray[$i];
+                $kmin = $i;               }
         }
-        $b = $cmin;
-        $carr[$ckmin] = $cmax;
-        $carr[$ckmax] = $b;
-        return [$cmin, $cmax,$ckmax, $ckmin, $carr];
+        $a = $min;
+        $this->initArray[$kmin] = $max;
+        $this->initArray[$kmax] = $a;
+        return $this->initArray;
     }
 }
 echo '<br>'.'<br>'."enter class".'<br>';
 $clasfinish = new min_max_exchange(5, 6, 40);
-print_r( $clasfinish->cnewmassiw(5, 6, 40));
-$finish = $clasfinish->cnewmassiw(5, 6, 40);
-echo '<br>'. 'min =';
-print_r ($clasfinish->copy_mini_and_maxi($finish)[0]);
-echo '<br>'. 'max =';
-print_r($clasfinish->copy_mini_and_maxi($clasfinish->cnewmassiw(5,6,40))[1]);
-echo '<br>'. 'key min =';
-print_r($clasfinish->copy_mini_and_maxi($clasfinish->cnewmassiw(5,6,40))[3]);
-echo '<br>'. 'key max =';
-print_r($clasfinish->copy_mini_and_maxi($clasfinish->cnewmassiw(5,6,40))[2]);
-echo '<br>'. 'array - ';
-print_r($clasfinish->copy_mini_and_maxi($clasfinish->cnewmassiw(5,6,40))[4]);
+echo '<br>';
+print_r($clasfinish->copy_mini_and_maxi());
 ?>

@@ -17,13 +17,13 @@ class пшArfill {
     function __construct(public string $ex, public int $num)
     {
     }
-    function __arrayFill(){
+    public function __arrayFill(): array {
         $arr = [];
-        $num = $this->num;
-        $ex = $this->ex;
-        for ($i=0; $i < $num; $i++){
-            $arr [$i] = $ex;
+
+        for ($i=0; $i < $this->num; $i++){
+            $arr [$i] = $this->ex;
         }
+
         return $arr;
     }
 }
