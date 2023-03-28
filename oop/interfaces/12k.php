@@ -13,7 +13,7 @@ print_r($enter); // вывод массива через ф-цию или еще
 ?>
 
 <?php //Пример: arrayFill('x', 5) сделает массив ['x', 'x', 'x', 'x', 'x'].
-class Arfill {
+class пшArfill {
     function __construct(public string $ex, public int $num)
     {
     }
