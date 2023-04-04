@@ -1,8 +1,9 @@
 <?php
-class Singleton {
-    private static Singleton $instance;
+namespace oop1;
+class A {
+    private static A $instance;
 
-    private function __construct()
+    public function __construct()
     {
 
     }
@@ -13,11 +14,8 @@ class Singleton {
             return self::$instance;
         }
 
-        self::$instance = new Singleton();
+        self::$instance = new A();
 
         return self::$instance;
     }
 }
-
-$singleton = Singleton::create();
-$singleton1 = Singleton::create();
