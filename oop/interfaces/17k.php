@@ -16,7 +16,7 @@ class String_funcrions {
         return $str;
     }
     public static function _strrev_(){ //  Переворачивает строку задом наперёд
-        $arr1 = [];
+
         $strokafinal = "";
         $arr1 = str_split(self::$stroka);
         $arr1 = array_reverse($arr1); //Возвращает массив с элементами в обратном порядке
@@ -25,17 +25,18 @@ class String_funcrions {
         }
         return $strokafinal;
     }
-    public static function ___strpos ($stro, $substring,$key){ //Возвращает позицию первого вхождения подстроки
+    public static function ___strpos (){ //Возвращает позицию первого вхождения подстроки
+
         $mass_sub = str_split(self::$substring);
         $mass_str = str_split(self::$stro);
-        $final = 0;
-for ($i =self:: $key; $i <=count($mass_str); $i++) {
-    if ($mass_sub[0] == $mass_str[$i]) {
-        $final = $i + self::$key ;
-        break;
+        //$final = 0;
+        for ($i =self:: $key; $i <=count($mass_str); $i++) {
+            self::$key++;
+        if ($mass_sub[0] == $mass_str[$i]) {
+              break;
+            }
         }
-    }
-        return $final;
+        return self::$key;
     }
 }
 $arr = ['hy', 'my', 'baby', '5', 'раз'];
@@ -50,7 +51,13 @@ echo '<br>';
 echo String_funcrions::_strrev_();
 
 echo '<br>'.'<br>'.'in class function strpos'.'<br>';
-echo String_funcrions::___strpos('dfisbdrs', 'sb', 0);
+echo 'stroka -  '. String_funcrions::$stro = 'odissey';
+echo '<br>';
+echo 'substring -  '.String_funcrions::$substring = 'i';
+echo '<br>';
+echo 'start number -  '.String_funcrions::$key = 0;
+echo '<br>';
+echo String_funcrions::___strpos();
 
 ?>
 
@@ -59,25 +66,23 @@ echo String_funcrions::___strpos('dfisbdrs', 'sb', 0);
 function _strpos_(string $str, string $substring1, int $k = 0){
     $mass_sub1 = str_split($substring1);
     $mass_str1 = str_split($str);
-    $final1 = 0;
-    for ($i = $k; $i <=count($mass_str1); $i++){
+     for ($i = $k; $i <=count($mass_str1); $i++){
+        $k++;
         if ($mass_sub1[0] ==$mass_str1[$i]){
-            $final = $i;//+$k-1;
             break;
+
         }
     }
     echo $mass_sub1[0].'<br>';
     print_r($mass_str1);
-    return $final1;
+    return $k;
 }
 echo '<br>'.'<br>'.'function strpos'.'<br>';
-//$final =
-//print_r($final) ;
-echo '<br>'. _strpos_('dsefodednfia', 'fs', 0);
+echo '<br>'. _strpos_('dsefodednfia', 'd', 2);
 ?>
 
 
-<?php
+<?php // проба
 class User{
     public function __construct(string $a, int $b)
     {
