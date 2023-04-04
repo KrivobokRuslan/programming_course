@@ -1,6 +1,7 @@
 <?php
 class Defstring {
     public static function rev_set ($str) {
+        $reverse = '';
         for ($i = strlen($str) - 1; $i >= 0; $i--) {
             $reverse .= $str[$i];
 

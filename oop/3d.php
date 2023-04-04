@@ -4,10 +4,10 @@ class Numbers {
     public static function instring ($nums, $needle) {
         $sum = 0;
         for ($i = 0; $i < strlen($nums); $i++) {
-            $sum++;
             if ($nums[$i] == $needle) {
                 break;
             }
+            $sum++;
         }
         return $sum;
     }
