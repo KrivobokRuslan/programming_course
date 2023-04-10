@@ -1,11 +1,7 @@
 <?php
-/*
-
-
-require_once 'D:\project\programming_course\forms\connect.php';
-
-
-*/?>
+require_once 'connect.php';
+require '../functions.php';
+?>
 
 <!doctype html>
 <html lang="en">
@@ -41,9 +37,8 @@ require_once 'D:\project\programming_course\forms\connect.php';
         <th>date_of_editing</th>
     </tr>
    <!-- --><?php
-/*    $tabOk = mysqli_query($connect, query :"SELECT * FROM `OK`");
 
-    */?>
+    ?>
     <tr>
         <td>1</td>
         <td>Petrov</td>
@@ -57,14 +52,22 @@ require_once 'D:\project\programming_course\forms\connect.php';
     </tr>
 </table>
 <h3>personal record</h3>
-<form OK = "" method="get">
+<form action="primer.php" method="get">
     <p>ID: <input type="number" name="id"></p>
+    <p><input type="hidden" value="123"></p>
     <p>Surname:<input type="text" name="surname"></p>
     <p>Name:<input type="text" name="name"></p>
     <p>Date_of_birth:<input type="number" name="date"></p>
     <p>work_speciality:<br><textarea name="special" cols="30" rows="5"></textarea></p>
             <button type="submit">entering personal data </button>
+            <button type="reset">clear</button>
+            <button type="button">BUTTON</button>
 </form>
+<?php
+    if (!empty($_GET)) {
+        dd($_GET);
+    }
+?>
 </body>
 </html>
 
