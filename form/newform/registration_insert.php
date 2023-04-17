@@ -1,10 +1,9 @@
 <?php
-$host = "localhost";
+$email = "email";
 $username = "root";
 $password = "";
-$dbname = "test";
 
-$connection = mysqli_connect($host, $username, $password, $dbname);
+$connection = mysqli_connect($email, $username, $password);
 if (!$connection) {
     die("Connection failed:" . mysqli_connect_error());
 }
@@ -13,4 +12,6 @@ $email = mysqli_real_connect($connection, $_POST['email']);
 $username = mysqli_real_connect($connection, $_POST['username']);
 $password = md5(mysqli_real_connect($connection, $_POST['password']));
 
-if
+$sql = 'INSERT INTO users("email", "username", "password") VALUES($values)';
+$query = $pdo->prepare($sql);
+$query->execute([$email, $username, $password]);
