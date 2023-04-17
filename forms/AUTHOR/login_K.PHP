@@ -1,7 +1,7 @@
 <?php
 $uname = $_POST ['UserName'];
 $pass = $_POST ['Password'];
-$pass = md5($pass."sdfsgss564875468");
+$pass = md5($pass);
 echo $uname,'   '.$pass ;
 $mysglconnection = new PDO('mysql:host=course-mysql;dbname=course', 'course_user', 'qwerty');
 //$mysglconnection->query("INSERT INTO Users( `username`, `password`) VALUES ($uname, $pass)");
