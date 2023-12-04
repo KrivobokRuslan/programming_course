@@ -2,7 +2,7 @@
 $num = 2;
 $result = 'nema takoi poru roku';
 
-switch ($nut) {
+switch ($num) {
     case 1:
         $result = 'zuma';
         break;

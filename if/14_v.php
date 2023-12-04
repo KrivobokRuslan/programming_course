@@ -1,7 +1,9 @@
 <?php
 $a = 5;
-if ($a = 0 && $a = 2 + 7 || ($a / 10)) {
-      echo 'virno';
+if ($a == 0 || $a == 2) {
+    $a += 7;
 } else {
-    echo 'ne virno';
-    }
+    $a /= 10;
+}
+
+echo $a;

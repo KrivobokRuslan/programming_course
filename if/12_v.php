@@ -6,10 +6,8 @@ if ($var != true) {
     echo "ne virno";
 }
 
-
-<?php
 $var = false;
-if ($var != true end $var = false)  {
+if ($var != true and $var == false)  {
     echo "virno";
 } else {
     echo "ne virno";

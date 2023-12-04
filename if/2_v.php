@@ -5,8 +5,8 @@ if ($min >= 0 && $min <= 15) {
  } elseif ($min >= 15 && $min <= 30) {
     echo "druga";
  }  elseif ($min >= 30 && $min <= 45) {
-    echo 'tretya'
+    echo 'tretya';
  } elseif ($min >= 45 && $min <= 59) {
-    echo 'chetvertya'
+    echo 'chetvertya';
  }
  

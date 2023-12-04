@@ -1,6 +1,6 @@
 <?php
-$a = 0;
-if ($a > 3) {
+$a = 2;
+if ($a > 0) {
  echo 'virno';
 } else {
   echo 'ne virno';
