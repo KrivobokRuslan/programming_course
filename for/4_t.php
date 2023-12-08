@@ -1,7 +1,7 @@
 <?php
 $n = 50;
-$result = $n;
-for ($a = 2; $a <=100; $a++) {
+$result = 0;
+for ($a = 1; $a <=100; $a++) {
     $result += $n;
 }
 

@@ -5,4 +5,4 @@ for ($i = 2; $i <= 5; $i++) {
     $a += $i;
 }
 
-echo $i;
+echo $a;

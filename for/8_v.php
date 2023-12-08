@@ -1,6 +1,8 @@
 <?php
+$a = 5;
 
-for ($a = -5; $a <= 5; $a--) {
-    echo $a;
-    break;
+for ($i = 4; $i >= -5; $i--) {
+    $a -= $i;
 }
+
+echo $a;

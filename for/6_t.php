@@ -2,11 +2,11 @@
 $a = 'xx';
 
 for ($x = 1; $x <= 5; $x++) {
-    $result = $a;
+    $result = '';
 
-
-    for ($b = 1; $b <= $a; $b++) {
+    for ($b = 1; $b <= $x; $b++) {
         $result = $result . $a;
     }
-        echo $result . '<br>';
+
+    echo $result . '<br>';
 }

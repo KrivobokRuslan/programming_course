@@ -1,13 +1,8 @@
 <?php
+$a = 0;
 
-for ($a = 2; $a <= 5; $a++) {
-    echo $a;
-    for ($i = 2; $i <= $a; $i +=1) {
+for ($i = 2; $i <= 5; $i++) {
+    $a += $i;
 }
 
-    echo $i;
-}
-    
-    
-
-    
+echo $a;
