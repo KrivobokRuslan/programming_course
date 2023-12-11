@@ -2,7 +2,7 @@
 $n = '3 * 3';
 
 for ($a = 1; $a <= 1; $a++) {
-$result = '';
+    $result = '';
 
-echo $result . $n;
+    echo $result . $n;
 }
