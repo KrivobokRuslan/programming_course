@@ -1,9 +1,9 @@
 <?php
 
-function helo(int $a, int $x): void {
+function hello(int $a, int $x): void {
     for ($i = $a; $i <= $x; $i+=2) {
         echo $i;
     }
 }
 
-helo(2, 100);
+hello(1, 100);

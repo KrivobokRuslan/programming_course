@@ -6,4 +6,4 @@ function red(int $a, int $b) {
     }
 }
 
-red(1, 10);
+red(3, 5);

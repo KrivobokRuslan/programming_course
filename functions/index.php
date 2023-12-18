@@ -1,8 +1,9 @@
 <?php
-function fromNtoM(int $n, int $m): void {
-    for ($i = $n; $i <= $m; $i++) {
-        echo $i . '<br>';
-    }
+$num = 5;
+function sum(int &$x): int {
+    $x = $x + 2;
+    return $x;
 }
-
-fromNtoM(5, 10);
+echo $num . '<br>';
+echo sum($num) . '<br>';
+echo $num . '<br>';

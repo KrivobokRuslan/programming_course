@@ -2,12 +2,13 @@
 
 
 function vas ($a, $b) {
-$n = 7;
-$result = 0;
-    for ($i = $n; $i <= 100; $i++) {
-        $result = $result + $n;
-        echo $result;
+    $result = 0;
+
+    for ($i = 1; $i <= $b; $i++) {
+        $result = $result + $a;
     }
+
+    echo $result;
 }
 
 vas (7, 100);

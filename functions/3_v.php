@@ -1,7 +1,7 @@
 <?php
 
 function vas ($a, $b) {
-    for ($i = 2; $i <= 20; $i +=2) {
+    for ($i = $a; $i <= $b; $i +=2) {
         echo $i;
     }
 }

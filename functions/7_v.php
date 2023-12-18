@@ -1,10 +1,12 @@
 <?php
 
-function vas ($a, $b) {
-
-    for ($i = 2; $i <= 5; $i++) {
-        
-        echo $i;
+function sumFromNtoM(int $a, int $b): int {
+    $result = 0;
+    for ($i = $a; $i <= $b; $i++) {
+        $result += $i;
     }
+
+    return $result;
 }
-vas (2, 5);
+
+echo sumFromNtoM(5, 10);

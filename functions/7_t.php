@@ -2,9 +2,11 @@
 
 function red($a, $x) {
     $b = 0;
-    for ($i = $a; $i <= $x; $i++;) {
+    for ($i = $a; $i <= $x; $i++) {
         $b += $i;
     }
+
+    echo $b;
 }
 
 red(2, 5);

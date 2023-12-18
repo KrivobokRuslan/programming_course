@@ -1,8 +1,8 @@
 <?php
 
-function (): void {
-    for ($a = 1; $a <= 100; $a++) {
-        echo $a . <br>;
+function from1to100(int $a = 1, int $b = 100): void {
+    for ($i = $a; $i <= $b; $i++) {
+        echo $i . '<br>';
     }
 }
 
