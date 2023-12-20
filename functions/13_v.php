@@ -1,9 +1,8 @@
 <?php
 
-function vas ($a, $b) {
-
-    for ($i = 7; $i <= 98; $i +=7) {
+function red(int $a = 7, int $b = 98) {
+    for ($i = $a; $i <= $b; $i +=7) {
         echo $i;
     }
 }
-vas (7, 98);
+red();

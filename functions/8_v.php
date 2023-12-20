@@ -1,10 +1,10 @@
 <?php
 
-function vas ($a, $b) {
-
-    for ($i = 5; $i >= -5; $i--) {
-    
-        echo $i;
-    }
+function red(int $a = 5, int $b = -5) {
+    $x =0;
+        for ($i = $a; $i >= $b; $i--) {
+        $x += $i;
+        }
+    echo $x;    
 }
-vas (5, -5);
+red(5, -5);

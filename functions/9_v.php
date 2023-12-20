@@ -1,11 +1,11 @@
 <?php
 
-function vas ($a, $b) {
-    $n = 50;
-    
-    for ($i = 2; $i <= 1000; $i++) {
-        $result = $result - $i / $n;
-        echo $result;
+function black(int $a = 1000, int $b = 50) {
+    $x = 0;
+    for ($i = $a; $i >= $b; $x++) {
+        $i /= 2;
+        
     }
+    echo $x;
 }
-vas (2, 1000);
+black();

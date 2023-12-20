@@ -1,11 +1,10 @@
 <?php
 
-function vas ($a) {
+function red(int $a, int $b) {
 
-    for ($i = 0; $i <= 10; $i++) {
-
-        echo ' ' . 'Ja vmiju korustuvatu ciklu';
+    for ($i = $a; $i <= $b; $i++) {
+        echo ' ' . 'Ja vmiju korustuvatu ciklu <br>';
     }
 }
 
-vas (10);
+red(1,10);

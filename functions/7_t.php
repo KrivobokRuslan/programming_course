@@ -1,6 +1,6 @@
 <?php
 
-function red($a, $x) {
+function sum(int $a = 2,int $x = 5) {
     $b = 0;
     for ($i = $a; $i <= $x; $i++) {
         $b += $i;
@@ -9,4 +9,4 @@ function red($a, $x) {
     echo $b;
 }
 
-red(2, 5);
+sum();

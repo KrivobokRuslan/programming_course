@@ -1,6 +1,6 @@
 <?php
 
-function vas($a) {
+function printNumbersFromNtoM(int $a) {
     for ($i = 1; $i <= $a; $i++) {
         $result = ' ';
 
@@ -11,5 +11,5 @@ function vas($a) {
         echo $result . '<br>';
     }
 }
-vas(59);
+printNumbersFromNtoM(59);
 

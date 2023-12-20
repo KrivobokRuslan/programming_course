@@ -1,14 +1,14 @@
 <?php
 
 
-function vas ($a, $b) {
+function printNumberFromNtoM(int $a, int $b) {
     $result = 0;
 
-    for ($i = 1; $i <= $b; $i++) {
+    for ($i = $a; $i <= $b; $i++) {
         $result = $result + $a;
     }
 
     echo $result;
 }
 
-vas (7, 100);
+printNumberFromNtoM(7, 100);

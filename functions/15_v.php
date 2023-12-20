@@ -1,9 +1,9 @@
 <?php
 
-function vas ($a) {
+function red(int $a, int $b) {
 
-    for ($i = 1; $i <= 4; $i++) {
+    for ($i = $a; $i <= $b; $i++) {
         echo "****** <br>";
     }
 }
-vas (4);
+red(1,4);

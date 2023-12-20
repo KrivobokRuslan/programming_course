@@ -1,6 +1,6 @@
 <?php
 
-function red($a) {
+function DrawingFigures(int $a = 15) {
     for ($i = 1; $i <= $a; $i++) {
         $result = " ";
 
@@ -12,4 +12,4 @@ function red($a) {
     }
 }
 
-red(10);
+DrawingFigures();

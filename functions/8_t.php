@@ -1,6 +1,6 @@
 <?php
 
-function red($a, $b) {
+function red(int $a = 5,int $b = -5) {
     $x =0;
     for ($i = $a; $i >=$b; $i--) {
         $x += $i;
@@ -9,4 +9,4 @@ function red($a, $b) {
     echo $x;
 }
 
-red(5, -5);
+red();

@@ -1,9 +1,9 @@
 <?php
 
-function vas($a) {
+function printNumbersFromNtoM(int $a) {
     for ($i = 1; $i <= $a; $i++) {
         echo '*** <br>';
     }
 }
 
-vas(10);
+printNumbersFromNtoM(10);

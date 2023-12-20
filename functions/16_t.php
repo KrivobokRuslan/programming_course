@@ -1,9 +1,9 @@
 <?php
 
-function red (int $a, int $b) {
+function red (int $a = 1, int $b = 10) {
     for ($i = $a; $i <= $b; $i++) {
         echo "Я вмію використовувати цикли <br>";
     }
 }
 
-red(1, 10);
+red();

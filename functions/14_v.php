@@ -1,10 +1,9 @@
 <?php
 
 
-function vas ($a, $b) {
-
-    for ($i = 1; $i <= 512; $i *= 2) {
+function red(int $a = 1, int $b = 512) {
+    for ($i = $a; $i <= $b; $i *= 2) {
         echo $i;
     }
 }
-vas (1, 512);
+red();

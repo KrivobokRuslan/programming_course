@@ -1,11 +1,11 @@
 <?php
 
-function vas ($a, $b) {
+function red(int $a, int $b) {
 
-  for ($i = 1; $i <= 9; $i++) {
+  for ($i = $a; $i <= $b; $i++) {
     for ($v = 1; $v <= 10; $v++) {
         echo $i . ' * ' . $v . ' = ' . ($i * $v) . '<br>';
     }
 }
 }
-vas (1, 10);
+red(1, 10);

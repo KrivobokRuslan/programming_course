@@ -1,9 +1,11 @@
 <?php
 
-function fore(int $a, int $x) {
+function drafting(int $a = 4, int $x = 105) {
+    $result = 0;
     for ($i = $a; $i <= $x; $i++) {
-        echo $i;
+       $result = $result + $a;
     }
+    echo $result;
 }
 
-fore(0, 100);
+drafting();

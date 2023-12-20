@@ -1,12 +1,9 @@
 <?php
 
-function vas ($a, $b) {
+function red(int $a = 1, int $b = 9) {
 
-
-    for ($i = 1; $i <=9; $i++) {
-        
-        
-        echo '3 * ' . $i . ' = ' . ($i * 3) . '<br>';
+    for ($i = $a; $i <= $b; $i++) {
+          echo '3 * ' . $i . ' = ' . ($i * 3) . '<br>';
     }
 }
-vas (3, 9);
+red(3, 9);

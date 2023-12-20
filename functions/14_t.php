@@ -1,10 +1,10 @@
 <?php
 
-function red(int $a, int $b) {
+function red(int $a = 1, int $b = 512) {
     for ($i = $a; $i <= $b; $i *= 2) {
         echo $i;
     }
 }
 
 
-red (1, 512);
+red ();

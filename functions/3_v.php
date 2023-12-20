@@ -1,8 +1,8 @@
 <?php
 
-function vas ($a, $b) {
+function printNumbersFromNtoM(int $a, int $b): void {
     for ($i = $a; $i <= $b; $i +=2) {
         echo $i;
     }
 }
-vas (1, 20);
+printNumbersFromNtoM(1, 20);
