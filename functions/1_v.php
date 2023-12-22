@@ -1,8 +1,8 @@
 <?php
-function printNumbersFromNtoM(int $n, int $m): void
+function printNumbersFromNtoM(int $n = 1, int $m = 100): void
 {
     for ($i = $n; $i <= $m; $i++) {
         echo $i . '<br>';
     }
 }
-printNumbersFromNtoM(1, 45);
+printNumbersFromNtoM();

@@ -1,6 +1,6 @@
 <?php
 
-function red(int $a, int $b) {
+function multiplication(int $a, int $b) {
 
   for ($i = $a; $i <= $b; $i++) {
     for ($v = 1; $v <= 10; $v++) {
@@ -8,4 +8,4 @@ function red(int $a, int $b) {
     }
 }
 }
-red(1, 10);
+multiplication(1, 10);

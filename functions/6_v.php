@@ -1,6 +1,6 @@
 <?php
 
-function printNumbersFromNtoM(int $a) {
+function printNumbersFromNtoM(int $a = 59) {
     for ($i = 1; $i <= $a; $i++) {
         $result = ' ';
 
@@ -11,5 +11,5 @@ function printNumbersFromNtoM(int $a) {
         echo $result . '<br>';
     }
 }
-printNumbersFromNtoM(59);
+printNumbersFromNtoM();
 

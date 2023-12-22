@@ -7,4 +7,4 @@ function red(int $a = 5, int $b = -5) {
         }
     echo $x;    
 }
-red(5, -5);
+red();

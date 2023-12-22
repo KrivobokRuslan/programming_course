@@ -1,6 +1,6 @@
 <?php
 
-function sumFromNtoM(int $a, int $b): int {
+function sumFromNtoM(int $a = 5, int $b = 10): int {
     $result = 0;
     for ($i = $a; $i <= $b; $i++) {
         $result += $i;
@@ -9,4 +9,4 @@ function sumFromNtoM(int $a, int $b): int {
     return $result;
 }
 
-echo sumFromNtoM(5, 10);
+echo sumFromNtoM();

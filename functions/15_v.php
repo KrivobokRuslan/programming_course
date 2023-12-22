@@ -1,9 +1,9 @@
 <?php
 
-function red(int $a, int $b) {
+function removeTheStars(int $a = 1, int $b = 4) {
 
     for ($i = $a; $i <= $b; $i++) {
         echo "****** <br>";
     }
 }
-red(1,4);
+removeTheStars();

@@ -8,4 +8,4 @@ function black(int $a = 5, int $b = 1) {
 
 }
 
-black(5, 1);
+black();

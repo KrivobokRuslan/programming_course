@@ -1,7 +1,7 @@
 <?php
 
 
-function printNumberFromNtoM(int $a, int $b) {
+function printNumberFromNtoM(int $a = 7, int $b = 100) {
     $result = 0;
 
     for ($i = $a; $i <= $b; $i++) {
@@ -11,4 +11,4 @@ function printNumberFromNtoM(int $a, int $b) {
     echo $result;
 }
 
-printNumberFromNtoM(7, 100);
+printNumberFromNtoM();
