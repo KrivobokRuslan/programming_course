@@ -7,4 +7,4 @@ $sum = 3;
     }
 }
 
-everyThirdElement([9]);
+everyThirdElement([3,6,9]);

@@ -6,4 +6,4 @@ function printArrayReverse(array $arr):int {
     }
 }
 
-printArrayReverse([7,6,8]);
+printArrayReverse([1,2,3]);

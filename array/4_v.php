@@ -1,10 +1,10 @@
 <?php
-function printArray(array $arr):int {
-
-    for ($i = 0; $i < count($arr); $i++) {
-        echo $arr[$i];
+function printArray(array $arr) {
+    foreach ($arr as $key){
+        echo $key;
+            
     }
     
 }
-
-printArray([3,4,7,2]);
+$a = [3,4,7,9];
+echo printArray($a);

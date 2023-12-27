@@ -1,8 +1,12 @@
 <?php
-
-function evenNumbers(array $arr): int {
-    for ($i = 0; $i < count($arr); $i += 2);{
-        echo $i;
+function printEvenElements(array $arr): int {
+    $sum = 0;
+        foreach ($arr as $k ) {
+            if ($k % 2 === 0) {
+                $sum += $k;
+            }
     }
-}
-evenNumbers([20]);
+    }
+    
+    $number = [1,2,3,4,5,6,7,8,9,10];
+    echo printEvenElements($number);

@@ -1,2 +1,4 @@
 <?php
-function maxArray()
+function maxArray(array $arr) {
+    
+}

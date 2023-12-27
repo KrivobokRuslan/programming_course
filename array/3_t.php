@@ -1,7 +1,12 @@
 <?php
 
-function sumArray(array $arr): float {
-    return array_sum($arr) / count($arr);
-}
+function ryd(array $a): void {
+    foreach ($a as $k){
+            $sum = array_sum($a);
+            $y = count($a);
+            $x = $sum / $y;
+        }
+    }
 
-echo sumArray([2,4,4]);
+ $a= [2,4,6,4,5];
+echo ryd([]);

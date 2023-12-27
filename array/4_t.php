@@ -1,11 +1,9 @@
 <?php
-function printArray(array $arr):int {
-    for ($i = 0; $i < count($arr); $i++) {
-        echo $arr[$i];
+function printArray(array $arr) {
+    foreach ($arr as $key) {
+        echo $key;
     }
-    
 }
 
-
-
-printArray([3,4,7,2]);
+$a = [3,6,2,6,0];
+echo printArray($a);

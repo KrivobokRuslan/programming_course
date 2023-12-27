@@ -1,8 +1,11 @@
 <?php
-function printArrayReverse(array $arr):int {
-    for ($i = 0; $i > count ($arr); $i++) {
-        echo $arr[$i];
-    }
+function reverseArray(array $arr): int{
+    $a = array_reverse($arr);
+    return $a;
 }
 
-printArrayReverse([2,4,6,1,0]);
+$b = [1,5,4,76];
+
+$x = reverseArray($b);
+
+echo implode($x);

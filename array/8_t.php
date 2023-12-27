@@ -1,8 +1,15 @@
 <?php
 
-function notEvenNumbers(array $arr): int {
-    for ($i = 1; $i < count($arr); $i += 2); {
-        echo $i;
-    }
+function notEven(array $arr): int {
+$sum = 0;
+    foreach ($arr as $k ) {
+        if ($k % 2 !== 0) {
+            $sum += $k;
+        }
+    
 }
-notEvenNumbers([50]);
+return $sum;
+}
+
+$number = [1,2,3,4,5,6,7,8,9,10];
+echo notEven($number);
