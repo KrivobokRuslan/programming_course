@@ -1,7 +1,7 @@
 <?php
 function printArray(array $arr) {
-    foreach ($arr as $key) {
-        echo $key;
+    foreach ($arr as $value) {
+        echo $value . '<br>';
     }
 }
 

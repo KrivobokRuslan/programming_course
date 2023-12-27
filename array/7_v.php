@@ -1,8 +1,8 @@
 <?php
 
-function evenNumbers(array $arr): int {
+function evenNumbers(array $arr): void {
     for ($i = 0; $i < count($arr); $i += 2); {
-        echo $i;
+        echo $arr[$i];
     }
 }
-evenNumbers([6]);
+evenNumbers([6,4,5,6,8,4,2]);

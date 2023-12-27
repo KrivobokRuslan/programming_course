@@ -1,9 +1,17 @@
 <?php
 
 function notEvenNumbers(array $arr): int {
-    for ($i = 0; $i < count($arr); $i -= 2); {
-        echo $i;
+    $sum = 0;
+
+    for ($i = 0; $i < count($arr); $i++); {
+        if ($i % 2 !== 0) {
+            $sum += $arr[$i];
+        }
     }
+
+    return $sum;
 }
 
-notEvenNumbers([10]);
+echo notEvenNumbers([10,4,5,6,8,34,7,5]);
+
+// .........................0...................8..............

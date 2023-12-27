@@ -1,16 +1,13 @@
 <?php
 
-function printArray [$arr]; {
-
-    function printArray(array $arr): int {
-        $sum = 1;
-        for ($i = 0; $i < count($arr); $i++) {
-             $sum *= $arr[$i];
-        }
-        return $sum;
+function printArray(array $arr): int {
+    $sum = 1;
+    for ($i = 0; $i < count($arr); $i++) {
+         $sum *= $arr[$i];
     }
-    $x = [2,4];
+    return $sum;
 }
+    $x = [2,4];
     echo printArray($x); 
     echo "<br>";
     echo array_product($x);

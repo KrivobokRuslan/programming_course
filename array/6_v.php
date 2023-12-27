@@ -1,9 +1,8 @@
 <?php
 
-function everyThirdElement(array $arr): int {
-$sum = 3;
+function everyThirdElement(array $arr): void {
     for ($i = 0; $i < count($arr); $i += 3) {
-        echo ($i) + $sum;
+        echo $arr[$i];
     }
 }
 
