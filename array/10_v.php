@@ -1,8 +1,8 @@
 <?php
 
-function maximumValue(array $arr): voit {
+function maximumValue(array $arr): int {
 
-    for ($i = 0; $i < count($arr); $i--); {
+    for ($i = 0; $i < count($arr); $i++); {
 
         echo $i;
     }

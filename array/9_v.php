@@ -1,8 +1,10 @@
 <?php
 
 function maximumElement(array $arr): int {
-    for ($i = 0; $i < count($arr); $i++); {
-        echo $i;
+    $a = 1;
+    for ($i = $a; $i < count($arr); $i++); {
+        $a += $i;
     }
+    echo $a;
 }
-maximumElement([6,9]);
+maximumElement([1,2]);
