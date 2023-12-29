@@ -1,11 +1,10 @@
 <?php
 
 function sumOfSquares(array $arr): int {
-
+    $sum = 0;
     for ($i = 0; $i < count($arr); $i++) {
-        $sum = $i * 2;
-        
+        $sum = $sum + ($arr[$i] * $arr[$i]);
     }
-    echo $i . $sum;
+    return $sum;
 }
-sumOfSquares([5,10]);
+echo sumOfSquares([5,10]);

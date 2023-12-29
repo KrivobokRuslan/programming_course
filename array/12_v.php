@@ -1,11 +1,19 @@
 <?php
 
-function numbers(array $arr): int {
-    $m = 1;
-    for ($i = 0; $i <= count($arr); $i++); {        
-        $m += $i;
+function numbers(int $n, int $m): array {
+    $result = [];
+
+    for ($i = $n; $i <= $m; $i++) {
+        $result[] = $i;
     }
 
-}     
-  
-echo numbers([1,2,3,4]);
+    return $result;
+}
+
+echo '<pre>';
+print_r(numbers(10, 30));
+echo '</pre>';
+
+echo '<pre>';
+print_r(range(2, 5));
+echo '</pre>';

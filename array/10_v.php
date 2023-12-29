@@ -6,5 +6,7 @@ function maximumValue(array $arr): int {
 
         echo $i;
     }
+
+    return 1;
 }
-maximumValue(9,8);
+maximumValue([9,8]);
