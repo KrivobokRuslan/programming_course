@@ -1,10 +1,12 @@
 <?php
 
-function maximumValue(array $arr): int {
-
-    for ($i = 0; $i < count($arr); $i++); {
-
-        echo $i;
+function minArray(array $arr) {
+    $min = 0;
+    foreach ($arr as $val) {
+     if ($min < $val) {
+       
     }
 }
-maximumValue(9,8);
+return $min;
+}
+echo minArray([0,55,8]);

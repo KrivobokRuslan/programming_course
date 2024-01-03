@@ -1,10 +1,15 @@
 <?php
 
-function maximumElement(array $arr): int {
-    $a = 1;
-    for ($i = $a; $i < count($arr); $i++); {
-        $a += $i;
+function maxArray(array $arr): int {
+    $max = 1;
+
+    foreach ($arr as $value) {
+        if ($value > $max) {
+            $max = $value;
+        }
     }
-    echo $a;
+
+   return $max;
 }
-maximumElement([1,2]);
+
+echo maxArray([10,90]);
