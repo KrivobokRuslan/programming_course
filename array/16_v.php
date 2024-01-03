@@ -1,11 +1,10 @@
 <?php
 
 function sumOfElements(array $arr) {
-    $a = [1, 2, 3];
-    
+    $sum = 0;
     foreach ($arr as $a) {
-        $sum = $a;
-        echo $sum;
+        $sum = $sum + $a;
     }
+    return $sum;
 }
-sumOfElements();
+echo sumOfElements([1, 2, 3]);

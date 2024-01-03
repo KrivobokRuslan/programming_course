@@ -1,23 +1,14 @@
 <?php
-
-function user(array $arr) {
-    $x = ['a' => 'Vasil', 'b' => 'Ulizlyuk', 'c' => 'Vasilevich'];
-    foreach ($arr as $val) {
-        echo $x;
-    }
-}
-user();
-
-
-
-<?php
-function user(array $arr) {
+function user(): void {
+    $user = [
+        'name' => 'Vasul',
+        'surname' => 'Ulizluk',
+        'patronymic' => 'Vasulovich'
+    ];
     $a = 'name';
     $b = 'surname';
     $c = 'patronymic';
-
-    foreach ($arr as $value) {
-        echo $a[Vasyl] . $b[Ulizlyuk] . $c[Vasiljevach] . '<br>';
-    }
+    echo $user[$b] . ' ' . $user[$a] . ' ' . $user[$c];
 }
-user();
+$func = 'user';
+$func();

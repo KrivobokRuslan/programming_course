@@ -3,7 +3,7 @@
 function everyOtherElement(array $arr) {
     $y = 0;
     foreach ($arr as $n => $m) {
-        if ($y % 1 == 0) {
+        if ($y % 2 == 0) {
             echo $m;
         }
         $y++;

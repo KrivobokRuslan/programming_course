@@ -1,11 +1,13 @@
 <?php
 
-function numbersArray(array $arr) {
+function numbersArray(int $start, int $end): array {
     $m = [];
-    for ($i = 1; $i <= count($arr); $i++); {        
-        $m = $i;
+    for ($i = $start; $i <= $end; $i++) {
+        $m[] = $i;
     }
-return $m;
+    return $m;
 }     
-  
-echo numbersArray([1,2,3,4]);
+
+echo '<pre>';
+print_r(numbersArray(5, 8));
+echo '</pre>';

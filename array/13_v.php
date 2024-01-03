@@ -1,10 +1,10 @@
 <?php
 
-function Abc(array $arr); {
+function Abc(): void {
     $x = ['a', 'b', 'c'];
 
-    foreach ($arr as $x); {
-        echo $x . '<br>';
+    foreach ($x as $value) {
+        echo $value . '<br>';
     }
 }
 Abc();

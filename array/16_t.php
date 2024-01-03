@@ -1,11 +1,8 @@
 <?php
 
-function SumArray() {
-    $number = [1,2,3];
-    $sum = array_sum($number);
-
-echo $sum;
+function SumArray(array $number): int {
+    return array_sum($number);
 }
 
 
-SumArray();
+echo SumArray([1,2,3]);

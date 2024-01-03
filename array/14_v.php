@@ -1,10 +1,10 @@
 <?php
 
-function letters(array $arr) {
+function letters() {
     $x = ['a', 'b', 'c', 'd'];
 
-    foreach ($arr as $x); {
-        echo "$x +" . '<br>';
+    foreach ($x as $value) {
+        echo "$value +" . '<br>';
     }
 }
 letters();
