@@ -6,7 +6,6 @@ function minArray(array $arr) {
      if ($min < $val) {
        
     }
+
+    return 1;
 }
-return $min;
-}
-echo minArray([0,55,8]);

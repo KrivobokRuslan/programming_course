@@ -1,6 +1,6 @@
 <?php
 
-function createNumberArray(array $arr) {
+function createNumberArray(): array {
     $result = [];
 
     for ($i = 6; $i <= 27; $i++) {
@@ -12,4 +12,6 @@ function createNumberArray(array $arr) {
 
 
 $numbersArray = createNumberArray();
-echo ($numbersArray);
+echo '<pre>';
+print_r($numbersArray);
+echo '</pre>';

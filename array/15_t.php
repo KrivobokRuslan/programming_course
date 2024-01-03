@@ -6,7 +6,7 @@ function everyOtherElement(array $arr) {
         if ($i % 2 == 0) {
             echo $v;
         }
-    $i++;
+        $i++;
     }
 }
 
