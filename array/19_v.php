@@ -1,12 +1,8 @@
 <?php
 
-function date(array $arr) {
-    $a = 'year';
-    $b = 'month';
-    $c = 'day';
-
-    foreach ($arr as $val) {
-        echo $a[2024] . $b[01] . $c[03];
-    }
+function dateArray() {
+    $date = ['year' => '2024', 'month' => '01', 'dey' => '04'];
+    echo $date['year'] .'.'. $date['month'] .'.'. $date['dey'];
 }
-date();
+
+dateArray();

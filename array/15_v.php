@@ -1,7 +1,7 @@
 <?php
 
 function everyOtherElement(array $arr) {
-    $y = 0;
+    $y = 1;
     foreach ($arr as $n => $m) {
         if ($y % 2 == 0) {
             echo $m;

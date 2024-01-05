@@ -14,4 +14,3 @@ function notEvenNumbers(array $arr): int {
 
 echo notEvenNumbers([10,4,5,6,8,34,7,5]);
 
-// .........................0...................8..............
