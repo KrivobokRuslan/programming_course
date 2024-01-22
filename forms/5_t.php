@@ -11,21 +11,22 @@
     <input type="submit" value="Шукати">
 </form>
 <?php
- $user = [[
-    'name' => 'Taras',
-    'surname' => 'Ulizlyuk',
-    'partonimik' => 'Vasulovich'
- ],
- [
-    'name' => 'Тарас',
-    'surname' => 'Улізлюк',
-    'patronimik' => 'Васильович'
- ],
+ $user = [
+         [
+            'name' => 'Taras',
+            'surname' => 'Ulizlyuk',
+            'partonimik' => 'Vasulovich'
+         ],
+         [
+            'name' => 'Тарас',
+            'surname' => 'Улізлюк',
+            'patronimik' => 'Васильович'
+         ],
 ];
 if (!empty($_POST)) {
-    foreach ($user as $databas) {
-        if ($databas['surname'] == $_POST['search']) {
-         echo '<p>Знайдено користувача: ' . $user['surname'] . ' ' .  $user['name'] . ' ' .  $user['patronimik'] . '</p>';
+    foreach ($user as $database) {
+        if ($database['surname'] == $_POST['search']) {
+         echo '<p>Знайдено користувача: ' . $database['surname'] . ' ' .  $database['name'] . ' ' .  $database['patronimik'] . '</p>';
         }
     }
 }
