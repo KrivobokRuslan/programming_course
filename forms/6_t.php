@@ -13,12 +13,12 @@
 </form>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $mainString = $_POST['Hello'];
-    $substring = $_POST['ll'];
+    $mainString = $_POST['mainString'];
+    $substring = $_POST['substring'];
 
     function findInString($mainString, $substring) {
         return strpos($mainString, $substring) !== false;
     }
     $result = findInString($mainString, $substring);
-    echo $result;
+    echo (int)$result;
 }
