@@ -16,7 +16,7 @@ function strLength(string $str): int {
         if (!isset($str[$i])) {
             break;
         }
-        $i++
+        $i++;
     }
     return $i;
 }

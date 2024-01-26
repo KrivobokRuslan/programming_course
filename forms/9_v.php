@@ -9,7 +9,7 @@
 if ($_SERVER["REQUEST_METHOD"]) {
     $from = "number1";
     $to = "number2";
-    $result = ($from <= $to);
+    $result = ($from <= $to);  // $result = ("number1" <= "number2")
     
     function strLength($from, $to) {
         for ($result = $from; $result <= $to; $result++)

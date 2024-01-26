@@ -4,12 +4,13 @@
 
 <form action="" method="POST">
     <label for="string">Вводимо слово:</label>
-    <input type="text" name="string"><br></br>
+    <input type="text" name="inputString"><br></br>
     <button type="submit">Вивести навпаки:</button>
 </form>
 
 <?php
- if ($_SERVER["STRING"] == "POST") {
+
+ if (!empty($_POST)) {
     $inputString = $_POST["inputString"];
     $reversedString = strrev($inputString);
     echo $reversedString;
