@@ -12,6 +12,12 @@
 
  if (!empty($_POST)) {
     $inputString = $_POST["inputString"];
-    $reversedString = strrev($inputString);
-    echo $reversedString;
- }
+    $reversedString = $inputString;
+
+            for ($i = $reversedString - 1; $i >= 0; $i--) {
+                $reversedString = $str[$i];
+                echo $i;
+            }
+            return $reversedString;
+        }
+    

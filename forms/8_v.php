@@ -4,23 +4,17 @@
 
 <form action="" method="POST">
     <label for="string">Вводимо слово:</label>
-    <input type="text" name="string"><br></br>
+    <input type="text" name="string1"><br></br>
     <button type="submit">Вивести навпаки:</button>
 </form>
 
 <?php
-if ($_SERVER("POST")) {
-    echo findInString($_POST['string']);
-}
-{
-    $inputString = "string";
-    $reversedString = "submit";
-
-    function findInString($inputString, $reversedString) {
-        return strpos($inputString, $reversedString) == false;
-        $result = findInString($inputString, $reversedString);
-        echo $result;
-
+if (!empty($_POST)) {
+    $inputString = $_POST;
+    $str_reverse = $_POST["string1"];
+    
+    echo $str_reverse;
+        
     }
-    }
+  
 
