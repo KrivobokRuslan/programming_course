@@ -12,12 +12,28 @@
 
  if (!empty($_POST)) {
     $inputString = $_POST["inputString"];
-    $reversedString = $inputString;
+    $strLength = strlen($inputString);
+    $reversedString = '';
 
-            for ($i = $reversedString - 1; $i >= 0; $i--) {
-                $reversedString = $str[$i];
-                echo $i;
-            }
-            return $reversedString;
-        }
-    
+    for ($i = $strLength - 1; $i >= 0; $i--) {
+        $reversedString .= $inputString[$i];
+    }
+
+    echo $reversedString;
+}
+// world
+
+// $i = 4; 4 >= 0;
+// '' . 'd'
+
+// $i = 3
+// $reversedString = '' . 'd' . 'l'
+
+// $i = 2
+// $reversedString = '' . 'd' . 'l' . 'r'
+
+// $i = 1
+// $reversedString = '' . 'd' . 'l' . 'r' . 'o'
+
+// $i = 0
+// $reversedString = '' . 'd' . 'l' . 'r' . 'o' . 'w'
