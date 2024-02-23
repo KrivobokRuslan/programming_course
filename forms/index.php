@@ -1,19 +1,77 @@
 <?php
-/**
- * 1) Зробити форму, в яку можна ввести 2 строки і отримати результат чи перша строка входить в другу строку. Аналог функції str_contains. Функція має давати результат true, якщо підстрока входить в строку, та false якщо підстрока не входить в строку.
- * Приклад використання: findInString('Hello', 'll') // true, findInString('Hello', 'ab') // false
- *
- * 2) Зробити форму, в яку можна ввести строку та отримати її довжину. Не використовувати функцію strlen (isset('Hello'[3]) // true, isset('Hello'[5]) // false)
- * 3) Зробити форму, в яку можна ввести строку та вивести цю строку на екран навпаки.
- * Приклад: Вводимо 'Hello', на екрані бачимо 'olleH'
- * 4) Зробити форму, в яку можна 2 числа. Перше число "ВІД" якого, а друге число "ДО" якого
- * вивести числа на екран
- * Приклад: Вводимо 1 та 10, на екрані бачимо числа в рядок від 1 до 10
- * Приклад *: Вводимо 10 та 1, на екрані бачимо числа в рядок від 10 до 1
- *
- *
- * Тарас - переробити 8 задача без використання strrev(). Зробити свою функцію-аналог strrev()
- * Василь Васильович - переробити 8 задачу
- *
- * Вирішити 9 задачу в парі
- */
+require '../functions.php';
+require '../mysql/connect.php';
+?>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    </head>
+    <body>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Create Employee</h5>
+                        <form action="employee_create.php" method="post">
+                            <div class="mb-3">
+                                <label for="full_name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="full_name" name="full_name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="date_of_birth" class="form-label">Date Of Birth</label>
+                                <input type="text" class="form-control" id="date_of_birth" name="date_of_birth">
+                            </div>
+                            <div class="mb-3">
+                                <label for="position" class="form-label">Position</label>
+                                <input type="text" class="form-control" id="position" name="position">
+                            </div>
+                            <div class="mb-3">
+                                <label for="salary" class="form-label">Salary</label>
+                                <input type="number" class="form-control" id="salary" name="salary">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Birth date</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Salary</th>
+                        <th scope="col">Created</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                        $q = $pdo->query('select * from employee');
+                        $q->execute();
+                        foreach ($q->fetchAll(PDO::FETCH_ASSOC) as $employee) {
+                            echo '<tr>';
+                            $id = $employee['id'];
+                            foreach ($employee as $field) {
+                                echo '<td>' . $field . '</td>';
+                            }
+                            echo '<td><a href="employee_delete.php?id=' . $id . '">DELETE</a></td>';
+                            echo '<tr>';
+                        }
+                    ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    </body>
+</html>

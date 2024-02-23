@@ -1,8 +1,12 @@
 <?php
 
 class ArrayHelper {
-    public function getSum($array) {
+    public function getSum(array $array): float|int {
         return array_sum($array);
+    }
+
+    public function reverse(array $array): array {
+        return array_reverse($array);
     }
 } 
 
